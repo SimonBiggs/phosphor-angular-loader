@@ -1,6 +1,6 @@
 {
   "name": "@simonbiggs/phosphor-angular-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -9,6 +9,7 @@
   "description": "Create a Phosphor widget with an Angular Component",
   "author": "Simon Biggs",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "jupyter",
     "jupyterlab",
