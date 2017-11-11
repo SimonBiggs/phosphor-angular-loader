@@ -1,6 +1,6 @@
 {
   "name": "@simonbiggs/phosphor-angular-loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
     "prepack": "npm run build"
   },
   "files": [
-    "lib/**/*.{d.ts,eot,gif,html,css,jpg,js,js.map,json,png,svg,woff2,ttf}"
+    "lib/*.d.ts",
+    "lib/*.js.map",
+    "lib/*.js"
   ],
   "dependencies": {
     "@angular/common": "^5.0.1",
