@@ -72,7 +72,7 @@ class ContentWidget extends AngularWidget<AppComponent, AppModule> {
 
         // Properties and methods on the component can be accessed via 
         // componentInstance
-        this.componentInstance.colour = name.toLocaleLowerCase();
+        this.componentInstance.colour = name.toLowerCase();
       });
     });
   }
