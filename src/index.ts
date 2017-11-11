@@ -15,13 +15,13 @@ Copyright 2017 Simon Biggs
 */
 
 /**
- * Bootstraps a root Angular component into a JupyterLab Widget.
+ * Bootstraps a root Angular component into a JupyterLab/Phosphor Widget.
  * 
  * Key properties on the AngularWidget are `componentInstance` and 
  * `componentReady`.
  * 
  * Once the componentReady promise resolves then the Angular component is 
- * accessible as `componentInstance`.
+ * accessible under the property `componentInstance`.
  */
 
 // Polyfills
@@ -79,8 +79,8 @@ export class AngularWidget<C, M> extends Widget {
   componentInstance: C;
   componentReady = new PromiseDelegate<void>();
 
-  constructor(ngComponent: Type<C>, ngModule: Type<M>) {
-    super();
+  constructor(ngComponent: Type<C>, ngModule: Type<M>, options?: Widget.IOptions) {
+    super(options);
     platformBrowserDynamic().bootstrapModule(ngModule)
     .then(ngModuleRef => {
       this.angularLoader = new AngularLoader(ngModuleRef);
@@ -90,5 +90,12 @@ export class AngularWidget<C, M> extends Widget {
       this.componentInstance = this.componentRef.instance;
       this.componentReady.resolve(undefined);
     });
+  }
+
+  dispose(): void {
+    this.ngZone.run(() => {
+      this.componentRef.destroy();
+    });
+    super.dispose();
   }
 }
