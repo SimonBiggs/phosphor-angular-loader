@@ -23,9 +23,12 @@ import {
   template: `
 <div>
   <input [(ngModel)]="message">
+  <p>Hello World!</p>
   <p>{{message}}</p>
+  <p *ngIf="colour">I am {{colour}}!</p>
 </div>`
 })
 export class AppComponent {
-  message = 'Hello World!'
+  message = 'Hello Angular! (edit me)'
+  colour: string;
 }

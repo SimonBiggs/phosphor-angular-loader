@@ -62,6 +62,19 @@ class ContentWidget extends AngularWidget<AppComponent, AppModule> {
     this.title.label = name;
     this.title.closable = true;
     this.title.caption = `Long description for: ${name}`;
+
+    // A promise for when the component is ready
+    this.componentReady.promise.then(() => {
+
+      // Any change to the component needs to be run within ngZone in order
+      // to activate Angular's change detection
+      this.ngZone.run(() => {
+
+        // Properties and methods on the component can be accessed via 
+        // componentInstance
+        this.componentInstance.colour = name.toLocaleLowerCase();
+      });
+    });
   }
 
   get inputNode(): HTMLInputElement {
