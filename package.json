@@ -1,5 +1,5 @@
 {
-  "name": "phosphor-angular-loader",
+  "name": "@simonbiggs/phosphor-angular-loader",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "repository": {
@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "prepack": "npm run build"
   },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,css,jpg,js,js.map,json,png,svg,woff2,ttf}"
