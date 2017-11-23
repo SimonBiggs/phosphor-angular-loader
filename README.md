@@ -10,7 +10,7 @@ If you just want to make a JupyterLab extension and don't know too much about An
 
 If you are comfortable with Angular but want to learn how to make a JupyterLab extension the above tutorial is also a good place to start. Go there first, then come back here and browse the Angular Widget examples.
 
-The target audience for this tool is those who are already comfortable creating [Angular Apps](https://angular.io/). I don't recommended attempting to use this tool unless you are confident with [Angular](https://angular.io/).
+The target audience for this tool is those who are already comfortable creating [Angular Apps](https://angular.io/). I don't recommended attempting to use this tool unless you are comfortable using [Angular](https://angular.io/).
 
 ## Examples
 
