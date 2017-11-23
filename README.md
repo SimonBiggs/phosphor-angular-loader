@@ -18,5 +18,6 @@ A raw example built just within phosphor (not as a jupyterlab extension) is prov
 
 ### Jupyterlab extension example
 
-The @simonbiggs/jupyterlab-form extension makes use of this package. The [source code](https://github.com/SimonBiggs/jupyterlab-form)
+The [@simonbiggs/jupyterlab-form](https://www.npmjs.com/package/@simonbiggs/jupyterlab-form) 
+extension makes use of this package. The [source code](https://github.com/SimonBiggs/jupyterlab-form)
 for that extension can provide a more extensive example of using this package for building jupyterlab extensions.
