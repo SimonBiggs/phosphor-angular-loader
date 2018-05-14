@@ -1,5 +1,7 @@
 # Phosphor Angular Loader
 
+No longer maintained. Please see https://github.com/SimonBiggs/scriptedforms/blob/master/scriptedforms/docs/create-your-own-angular-jupyterlab-extension.md
+
 ## Introduction
 
 This loader was built to facilitate creating JupyterLab extensions while making use of the [Angular framework](https://angular.io/). 
